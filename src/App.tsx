@@ -1,5 +1,7 @@
 import './App.css';
 import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 
 export function App() {
 
@@ -9,9 +11,9 @@ export function App() {
   return (
     <>
       <Header />
-      {/* Headeris */}
-      {/* Saturs */}
-      {/* Futeris */}
+      <Content />
+     
+      <Footer />
 
     </>
   );

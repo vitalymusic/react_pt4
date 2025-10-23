@@ -6,3 +6,7 @@ html {
   justify-content: center;
   height: 100%; */
 }
+body{
+  margin: 0px;
+  font-family: 'Arial';
+}
