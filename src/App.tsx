@@ -28,6 +28,7 @@ export function App() {
 
   function acceptCookies(){
       localStorage.setItem("cookies-accepted","true");
+      setCookie(true);
   }
 
 
@@ -55,8 +56,8 @@ export function App() {
 
       {cookie==false?
         (
-          <div>
-            kookie <button onClick={()=>{acceptCookies()}}>Piekrītu</button>
+          <div className='cookieMessage'>
+            Cookies <button onClick={()=>{acceptCookies()}}>Piekrītu</button>
           </div>
         ):
         (null)

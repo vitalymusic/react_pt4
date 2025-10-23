@@ -10,3 +10,14 @@ body{
   margin: 0px;
   font-family: 'Arial';
 }
+
+.cookieMessage{
+  position: fixed;
+  bottom:0px;
+  width: 100%;
+  padding: 20px;
+  background-color: beige;
+  color:black;
+  text-align: center;
+  box-shadow: 0px 0px 10px black;
+}
