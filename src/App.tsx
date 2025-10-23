@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Dialog from './content/Dialog';
 
 // UseState;
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 
 
 
@@ -17,11 +17,29 @@ export function App() {
   // Galvenais komponents
 
   const [show,setShow] = useState(false);
+  const [cookie,setCookie] = useState(false);
+
+
 
   function closeDialog(){
     setShow(false);
   }
 
+
+  function acceptCookies(){
+      localStorage.setItem("cookies-accepted","true");
+  }
+
+
+  function checkCookies(){
+    if(localStorage.getItem("cookies-accepted")=="true"){
+      setCookie(true);
+    }
+  }
+
+  useEffect(()=>{
+    checkCookies();
+  },[cookie]);
 
   return (
     <>
@@ -31,11 +49,19 @@ export function App() {
       }}>Parādīt dialogu</button>
 
       <Content />
-      
-
           <Dialog  show={show}  hideFunction={closeDialog}/>
       <Footer />
 
+
+      {cookie==false?
+        (
+          <div>
+            kookie <button onClick={()=>{acceptCookies()}}>Piekrītu</button>
+          </div>
+        ):
+        (null)
+      
+      }
     </>
   );
 }
