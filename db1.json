@@ -1,0 +1,42 @@
+{
+  "users": [
+    { "id": 1, "name": "Andris Ozols", "email": "andris@example.lv", "role": "admin" },
+    { "id": 2, "name": "Marta Liepa", "email": "marta@example.lv", "role": "editor" },
+    { "id": 3, "name": "Jānis Bērziņš", "email": "janis@example.lv", "role": "user" }
+  ],
+
+  "posts": [
+    { "id": 1, "title": "Kas jauns tīmekļa izstrādē", "body": "Jaunākās tehnoloģijas front-end izstrādē...", "authorId": 2, "categoryId": 1 },
+    { "id": 2, "title": "Kā optimizēt SEO 2025. gadā", "body": "SEO tendences un praktiski padomi...", "authorId": 3, "categoryId": 2 },
+    { "id": 3, "title": "Digitālā drošība uzņēmumiem", "body": "Kā pasargāt savu tīmekļa vietni no uzbrukumiem...", "authorId": 1, "categoryId": 3 }
+  ],
+
+  "categories": [
+    { "id": 1, "name": "Tehnoloģijas" },
+    { "id": 2, "name": "Mārketings" },
+    { "id": 3, "name": "Drošība" }
+  ],
+
+  "comments": [
+    { "id": 1, "postId": 1, "userId": 3, "text": "Ļoti noderīgs raksts!" },
+    { "id": 2, "postId": 2, "userId": 1, "text": "Paldies par padomiem." },
+    { "id": 3, "postId": 3, "userId": 2, "text": "Svarīga tēma mūsdienās." }
+  ],
+
+  "products": [
+    { "id": 1, "name": "Web hostings", "price": 5.99, "inStock": true },
+    { "id": 2, "name": "Domēna reģistrācija", "price": 9.99, "inStock": true },
+    { "id": 3, "name": "SSL sertifikāts", "price": 14.99, "inStock": false }
+  ],
+
+  "orders": [
+    { "id": 1, "userId": 3, "productId": 1, "quantity": 1, "status": "completed" },
+    { "id": 2, "userId": 2, "productId": 2, "quantity": 2, "status": "pending" }
+  ],
+
+  "settings": {
+    "siteName": "Demo API",
+    "version": "1.0.0",
+    "maintenance": false
+  }
+}

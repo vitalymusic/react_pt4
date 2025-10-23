@@ -1,10 +1,12 @@
 import './App.css';
 
 export function App() {
+
+  let data; 
+  data = "test";
   return (
     <>
-      <h1>Parcel React App</h1>
-      <p>Edit <code>src/App.tsx</code> to get started!</p>
+      <h1>Hello world!!! {data}</h1>
     </>
   );
 }
