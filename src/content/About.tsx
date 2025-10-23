@@ -1,5 +1,6 @@
 import React from 'react'
 import Apraksts from './Apraksts';
+import "./about.css";
 
 export default function About() {
   return (
