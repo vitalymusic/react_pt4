@@ -1,0 +1,21 @@
+header{
+
+    *{
+      margin:0px;  
+    }
+    /* height: 100px; */
+    background-color: darkgrey;
+    padding: 30px;
+    color:black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1{
+        font-size: 5rem;
+    }   
+    h2{
+        font-size: 2rem;
+    }
+}

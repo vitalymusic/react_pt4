@@ -1,12 +1,18 @@
 import './App.css';
+import Header from './Header';
 
 export function App() {
 
   let data; 
   data = "test";
+  // Galvenais komponents
   return (
     <>
-      <h1>Hello world!!! {data}</h1>
+      <Header />
+      {/* Headeris */}
+      {/* Saturs */}
+      {/* Futeris */}
+
     </>
   );
 }
