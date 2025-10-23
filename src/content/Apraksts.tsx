@@ -1,11 +1,18 @@
 import './apraksts.css';
 
-export default function Apraksts() {
+
+// interface DatiProps {
+//     virsraksts: string;
+//     attels: string;
+//     apraksts: string
+// }
+export default function Apraksts({dati}:any) {
+
   return (
     <div className="descBlock">
-        <h5>Teksts</h5>
-        <img src="#" />
-        <p>Apraksts</p>
+        <h5>{dati.virsraksts}</h5>
+        <img src={dati.attels} />
+        <p>{dati.apraksts}</p>
     </div>
   )
 }

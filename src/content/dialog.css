@@ -1,0 +1,17 @@
+.dialog{
+   width: 30%;
+
+  display: block;
+  position: fixed;
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 0px 10px black;
+    text-align: center;
+
+}
+.show{
+    /* display: block; */
+}
