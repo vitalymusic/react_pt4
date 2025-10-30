@@ -1,8 +1,11 @@
 import React from 'react'
 import {useState,useEffect} from 'react';
+import {Link} from 'react-router';
 
 export default function Datuielade() {
   const [data,setData] = useState([]);
+
+
   
 
 
@@ -14,12 +17,13 @@ export default function Datuielade() {
   }
 
 
+  useEffect(()=>{
+    loadData();
+  },[])
+
   return (
     <>
       <h3>Datuielade</h3>
-
-    <button onClick={loadData}>Ielādēt datus</button>
-
     <div className='dati' style={{
       display:"flex",
       flexWrap:"wrap",
@@ -41,6 +45,7 @@ export default function Datuielade() {
                       <p>{item.description}</p>
                       <img src={item.thumbnail} alt="" />
                       <h5 style={{textAlign:"center"}}>{item.price} &euro;</h5>
+                      <Link to={`/product/${item.id}`}>Skatīt produktu</Link>
                   </div>
                 )
             })}
