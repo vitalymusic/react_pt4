@@ -45,7 +45,7 @@ export default function Datuielade() {
                       <p>{item.description}</p>
                       <img src={item.thumbnail} alt="" />
                       <h5 style={{textAlign:"center"}}>{item.price} &euro;</h5>
-                      <Link to={`/product/${item.id}`}>Skatīt produktu</Link>
+                      <Link to={`/product/${item.id}`} className='button'>Skatīt produktu</Link>
                   </div>
                 )
             })}

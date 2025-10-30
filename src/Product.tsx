@@ -7,12 +7,12 @@ export default function Product() {
   const { id } = useParams();
 
 
-  const [productData,setproductData] = useState(null);
+  const [productData,setproductData] = useState("");
 
   function loadproductData(productId :any){
          fetch('https://dummyjson.com/products/'+productId)
     .then(res => res.json())
-    .then(data => setproductData(productData))
+    .then(data => setproductData(data))
     .finally(()=>{console.log(productData)})
 
   }
@@ -20,14 +20,21 @@ export default function Product() {
   useEffect(()=>{
     loadproductData(id)
   },[])
-
+  if(productData){
   return (
-    <>
-      <Link to="/">Atgrizties uz sarakstu</Link>
-      <h1>Produkta kartiņa nr: {id}</h1>
+    <div className='prodctCard'>
+      <Link to="/" className='button'>Atgrizties uz sarakstu</Link>
+      <h1>{productData.title}</h1>
+      <p>{productData.description}</p>
+      <div className='images'>
+        <img src={productData.images[0]} />
+
+      </div>
 
 
 
-    </>
+
+    </div>
   )
+}
 }

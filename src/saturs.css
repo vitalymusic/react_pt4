@@ -3,3 +3,32 @@
     padding: 50px;
     background-color: antiquewhite;
 }
+
+.button{
+    display: block;
+    max-width:250px;
+    background-color: rgb(5, 72, 174);
+    color:white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin:auto;
+    border-radius: 10px;
+}
+.button:hover{
+     background-color: rgb(3, 50, 122);
+}
+
+.item{
+    border:2px solid rgb(208, 208, 208);
+    padding:20px 30px;
+    background-color: white;
+    border-radius: 5px;
+    h3{
+        text-align: center;
+    }
+    img{
+        display: block;
+        width: 100%;
+    }
+}
