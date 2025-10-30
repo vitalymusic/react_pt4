@@ -40,7 +40,6 @@ export default function Contact() {
         }).catch((error)=>{
                  alert("ir kļūda nosūtot datus: "+ error);
         })
-
     }
     return (
         <>

@@ -2,6 +2,7 @@ import React from 'react'
 import About from './content/About';
 import Services from './content/Services';
 import Contact from './Contact';
+import Datuielade from './Datuielade';
 import './saturs.css';
 
 export default function Content() {
@@ -10,6 +11,9 @@ export default function Content() {
         {/* Par mums */}
         <About />
         <Services />
+
+        <Datuielade />
+
         {/* Pakalpojumi */}
          < Contact /> 
     </div>
