@@ -7,10 +7,21 @@ export default function Contact() {
     const [subject,setSubject] = useState('');
     const [message,setMessage] = useState('');
 
+    function checkForm(){
+           if(email.length > 3 && subject.length > 3 && message.length>5){
+                return true
+           }  else{
+                alert("Aizpildiet formu");
+            return false
+           }   
+    }     
 
 
     function submitForm(e :any){
         e.preventDefault();
+
+        if(!checkForm()){ return false}
+
         console.log(e);
 
         fetch('https://jsonplaceholder.typicode.com/posts',{
@@ -29,8 +40,6 @@ export default function Contact() {
         }).catch((error)=>{
                  alert("ir kļūda nosūtot datus: "+ error);
         })
-
-
 
     }
     return (
