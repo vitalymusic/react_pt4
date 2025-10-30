@@ -50,6 +50,7 @@ export function App() {
       }}>Parādīt dialogu</button>
 
       <Content />
+      
           <Dialog  show={show}  hideFunction={closeDialog}/>
       <Footer />
 
