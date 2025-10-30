@@ -9,12 +9,34 @@ export default function Contact() {
 
 
 
+    function submitForm(e :any){
+        e.preventDefault();
+        console.log(e);
+
+        fetch('https://jsonplaceholder.typicode.com/posts',{
+            method:"POST",
+            headers: { "Content-Type": "application/json" },
+            body:JSON.stringify({
+                email:{email},
+                subject:{subject},
+                message:{message}
+            })
+        }).then(()=>{
+            setEmail("");
+            setSubject("");
+            setMessage("");
+            alert("Dati veiksmīgi nosūtīti")
+        }).catch((error)=>{
+                 alert("ir kļūda nosūtot datus: "+ error);
+        })
+
+
+
+    }
     return (
-
-
         <>
             <h1>Kontaktu forma</h1>
-            <form>
+            <form onSubmit = {submitForm}>
                 <div>
                     <span className="text-sm font-medium">E-pasts</span>
                     <input
