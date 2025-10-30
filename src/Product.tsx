@@ -7,10 +7,10 @@ export default function Product() {
   const { id } = useParams();
 
 
-  const [productData,setproductData] = useState([]);
+  const [productData,setproductData] = useState(null);
 
-  function loadproductData(id :number){
-         fetch('https://dummyjson.com/products/'+id)
+  function loadproductData(productId :any){
+         fetch('https://dummyjson.com/products/'+productId)
     .then(res => res.json())
     .then(data => setproductData(productData))
     .finally(()=>{console.log(productData)})
